@@ -19,7 +19,15 @@ const products = [
     price:59000,
     img:"https://d21d281c1yd2en.cloudfront.net/media/product_images/century-12-inches-rechargeable-table-fan-with-solar-panel-two-bulbs-c2a4-640x640.jpg",
     soldOut:false
+  }, 
+  { 
+  name: "Air fryer", 
+    description:"digital 6litres Air fryer with adjustable temperature and timer", 
+    price:50, 
+    img:"https://example.com/airfryer.jpg", 
+    soldOut:false 
   }
+
 ];
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
