@@ -94,6 +94,13 @@ document.addEventListener("DOMContentLoaded", function(){
   const checkoutBtn = document.getElementById('checkout');
   checkoutBtn.addEventListener('click', function(){
     if(cart.length===0){ alert("Your cart is empty!"); return; }
+    let customerName = prompt("Enter your full name:");
+let customerPhone = prompt("Enter your phone number:");
+
+if (!customerName || !customerPhone) {
+  alert("Name and phone number are required!");
+  return;
+}
     let totalAmount = cart.reduce((sum,item)=>sum + item.price*item.qty,0);
     let handler = PaystackPop.setup({
       key: 'pk_test_1224eb0ed84251c2ca7babe4c33be28d5949783f',
