@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function(){
     if(cart.length===0){ alert("Your cart is empty!"); return; }
     let customerName = prompt("Enter your full name:");
 let customerPhone = prompt("Enter your phone number:");
-
 if (!customerName || !customerPhone) {
   alert("Name and phone number are required!");
   return;
