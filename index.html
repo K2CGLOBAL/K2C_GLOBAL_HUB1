@@ -3,34 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K2C GLOBAL HUB</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://js.paystack.co/v1/inline.js"></script>
+<title>K2C Global Hub</title>
+<style>
+body {font-family: Arial, sans-serif; background:#f5f5f5; margin:0; padding:0;}
+h2 {margin-bottom:10px;}
+.products, #cart {padding:20px; display:flex; flex-wrap:wrap; gap:20px;}
+.product {background:#fff; padding:15px; border-radius:10px; width:200px; text-align:center;}
+button {padding:10px 15px; border:none; border-radius:5px; background:#28a745; color:white; cursor:pointer;}
+input {border:1px solid #ccc; border-radius:5px;}
+</style>
 </head>
 <body>
-<header>
-<h1>K2C GLOBAL HUB</h1>
-<p>Buy quality products directly and pay easily!</p>
-</header>
 
 <main>
+
+<!-- Products Section -->
 <section id="products" class="products"></section>
+
+<!-- Customer Form -->
 <div style="background:#fff; padding:15px; margin:20px; border-radius:10px;">
   <h2>Customer Details</h2>
-
-  <input id="cust-name" type="text" placeholder="Enter your full name"
-  style="width:100%; padding:10px; margin-bottom:10px;" />
-
-  <input id="cust-phone" type="text" placeholder="Enter your phone number"
-  style="width:100%; padding:10px; margin-bottom:10px;" />
+  <input id="cust-name" type="text" placeholder="Enter your full name" style="width:100%; padding:10px; margin-bottom:10px;" />
+  <input id="cust-phone" type="text" placeholder="Enter your phone number" style="width:100%; padding:10px; margin-bottom:10px;" />
 </div>
+
+<!-- Cart Section -->
 <section id="cart">
-<h2>Cart</h2>
-<div id="cart-items"></div>
-<button id="checkout">Checkout</button>
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+  <h3>Total: ₦<span id="total">0</span></h3>
+  <button id="checkout">Checkout</button>
 </section>
+
 </main>
 
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>emailjs.init("YOUR_USER_ID_HERE");</script>
 <script src="script.js"></script>
+
 </body>
 </html>
