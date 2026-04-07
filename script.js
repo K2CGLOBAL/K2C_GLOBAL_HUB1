@@ -122,4 +122,4 @@ document.getElementById('checkout').onclick = function(){
   });
 
   handler.openIframe();
-    }
+}
